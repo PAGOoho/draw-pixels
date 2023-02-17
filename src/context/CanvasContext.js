@@ -25,7 +25,7 @@ export const CanvasProvider = ({ children }) => {
   // Set default value for color in use
   const [activeColor, setActiveColor] = useState('#ffffff');
 
-  // Timeout helper for Pooper-Notifications
+  // Timeout helper for Toastify-Notifications
   // Making same Notifications appear only once every 5 seconds. Otherwise user could trigger endless naotifications by clicking like a maniac
   let timedOut;
 

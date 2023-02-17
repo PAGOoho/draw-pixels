@@ -1,22 +1,26 @@
 # Simple Draw-Pixel-App
 
-### Basic React App using Tailwind (Daisy UI) and popper
+Basic React App using Tailwind (Daisy UI) and toastify
 
-### Daisy UI is used to make designing faster for this small project
+### Daisy UI
 
-### Popper is used to give the user feedback while using the app (Notifications)
+...is used to make designing faster for this small project
+
+### toastify
+
+...is used to give the user feedback while using the app (Notifications)
 
 ## Projectidea
 
-### Making a simple Drawing Application without the Canvas-Element and other third-party tools/frameworks. Add functionalities like adjusting canvas size, choose colors and reset canvas. UI/UX has to be functional.
+Making a simple Drawing Application without the Canvas-Element and other third-party tools/frameworks. Add functionalities like adjusting canvas size, choose colors and reset canvas. UI/UX has to be functional.
 
 ## Time needed
 
-### 5h, react + jsx
+### react + jsx -> 5h
 
-### 3h, css
+### CSS -> 3h
 
-### 1-2h, small adjustments
+### small adjustments, commenting -> 1-2h
 
 ## Commands
 
