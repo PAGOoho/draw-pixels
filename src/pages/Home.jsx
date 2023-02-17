@@ -5,6 +5,7 @@ import Canvas from '../components/Canvas';
 function Home() {
   return (
     <>
+      <h1>Draw Pixels</h1>
       <Header />
       <Palette />
       <Canvas />

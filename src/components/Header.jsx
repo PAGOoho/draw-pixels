@@ -3,13 +3,17 @@ import { useContext, useRef } from 'react';
 import CanvasContext from '../context/CanvasContext';
 
 function Header() {
+  // Setup context
   const { canvasoptions, setCanvasOptions, clearCanvas } =
     useContext(CanvasContext);
 
+  // Setup Refs to access userinput
   const widthRef = useRef();
   const heightRef = useRef();
   const pixelsizeRef = useRef();
 
+  // Set Canvas-Options
+  // Is triggered on click on set-button
   const setCanvas = () => {
     setCanvasOptions(
       widthRef.current.value,
@@ -18,6 +22,8 @@ function Header() {
     );
   };
 
+  // Clear Canvas
+  // Is triggered on click on clear-button
   const handleClear = () => {
     clearCanvas();
   };
@@ -66,7 +72,7 @@ function Header() {
           Clear Canvas
         </button>
       </div>
-      <p>Important: Adjusting these parameters will reset the canvas.</p>
+      <i>Important: Adjusting these parameters will reset the canvas.</i>
     </header>
   );
 }

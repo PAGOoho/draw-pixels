@@ -3,15 +3,21 @@ import { useRef, useContext } from 'react';
 import CanvasContext from '../context/CanvasContext';
 
 function Palette() {
+  // Setup context
   const { colors, updateActiveColor, activeColor, addColor } =
     useContext(CanvasContext);
 
+  // Set Ref for user hexcode input
   const newcolor = useRef();
 
+  // Change active color
+  // Triggered on Click on color
   const handleChoose = (color) => {
     updateActiveColor(color);
   };
 
+  // Add new color
+  // Triggered on click on add button
   const handleAdd = () => {
     addColor(newcolor.current.value);
   };

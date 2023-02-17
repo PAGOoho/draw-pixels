@@ -22,10 +22,6 @@ body {
   padding: 15px;
 }
 
-h2 {
-  margin-bottom: 10px;
-}
-
 input {
   margin: 0 10px;
   padding: 3px;
@@ -35,18 +31,27 @@ input {
   margin: 10px;
 }
 
+#app {
+  display: flex;
+  flex-flow: column wrap;
+  align-items: center;
+}
+
 header,
 section {
   display: flex;
   flex-flow: column wrap;
   align-items: center;
-  margin: 40px 0;
+  margin: 20px 0;
+  padding: 10px;
+  background: rgb(42, 48, 60);
+  border-radius: 8px;
+  box-shadow: 5px 5px 15px 5px rgba(0, 0, 0, 0.48);
 }
 
 #canvas {
   display: flex;
   flex-flow: row wrap;
-  border: 1px solid #fff;
   justify-content: center;
 }
 

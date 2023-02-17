@@ -5,11 +5,13 @@ import { toast } from 'react-toastify';
 const CanvasContext = createContext();
 
 export const CanvasProvider = ({ children }) => {
+  // Set default values for canvas size
   const [canvasoptions, setCanvasoptions] = useState({
     width: 400,
     height: 400,
     pixelsize: 12,
   });
+  // Set default values for colors
   const [colors, setColors] = useState([
     '#ffffff',
     '#000000',
@@ -20,8 +22,11 @@ export const CanvasProvider = ({ children }) => {
     '#420e07',
     '#810000',
   ]);
+  // Set default value for color in use
   const [activeColor, setActiveColor] = useState('#ffffff');
 
+  // Timeout helper for Pooper-Notifications
+  // Making same Notifications appear only once every 5 seconds. Otherwise user could trigger endless naotifications by clicking like a maniac
   let timedOut;
 
   const timeOutHelper = (msg, type) => {
@@ -34,11 +39,15 @@ export const CanvasProvider = ({ children }) => {
     timedOut = true;
   };
 
+  // Clear Canvas function
+  // resets all elements with class 'pixel'
   const clearCanvas = () => {
     const pixels = document.querySelectorAll('.pixel');
     pixels.forEach((box) => (box.style.background = '#666'));
   };
 
+  // Update Canvas options
+  // Only if user stays inside parameters
   const setCanvasOptions = (width, height, pixelsize) => {
     if (
       width >= 1 &&
@@ -60,12 +69,16 @@ export const CanvasProvider = ({ children }) => {
     }
   };
 
+  // Update active color function
   const updateActiveColor = (color) => {
     setActiveColor(color);
   };
 
+  // Add color function
+  // Validate userinput and given hexcode
   const addColor = (newcolor) => {
-    // Regular expression checking if validate except for #
+    // Regular expression checking if validate except for '#'
+    // if '#' is not set the app does to make hexcode valid
     const hexreg = /[0-9A-F]{6}$/i;
 
     if (!hexreg.test(newcolor)) {
